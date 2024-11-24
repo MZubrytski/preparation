@@ -1,6 +1,33 @@
-{
+const IS_DEV = process.env.APP_VARIANT === 'development';
+const IS_PREVIEW = process.env.APP_VARIANT === 'preview';
+
+const getUniqueIdentifier = () => {
+  if (IS_DEV) {
+    return 'com.maksimzubrytski.productpreparation.dev';
+  }
+
+  if (IS_PREVIEW) {
+    return 'com.maksimzubrytski.productpreparation.preview';
+  }
+
+  return 'com.maksimzubrytski.productpreparation';
+};
+
+const getAppName = () => {
+  if (IS_DEV) {
+    return 'StickerSmash (Dev)';
+  }
+
+  if (IS_PREVIEW) {
+    return 'StickerSmash (Preview)';
+  }
+
+  return 'StickerSmash: Emoji Stickers';
+};
+
+export default {
   "expo": {
-    "name": "product-preparation",
+    "name": getAppName(),
     "slug": "product-preparation",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,7 +43,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.doncarleon.productpreparation"
+      "package": getUniqueIdentifier()
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +64,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f084fcfd-fcba-43ca-bd95-f97b522d0544"
+      }
     }
   }
 }
