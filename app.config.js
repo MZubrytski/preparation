@@ -26,31 +26,31 @@ const getAppName = () => {
 };
 
 export default {
-  "expo": {
-    "name": getAppName(),
-    "slug": "product-preparation",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
+  expo: {
+    name: getAppName(),
+    slug: "product-preparation",
+    version: "1.0.0",
+    orientation: "portrait",
+    icon: "./assets/images/icon.png",
+    scheme: "myapp",
+    userInterfaceStyle: "automatic",
+    newArchEnabled: true,
+    ios: {
+      supportsTablet: true
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+    android: {
+      adaptiveIcon: {
+        foregroundImage: "./assets/images/adaptive-icon.png",
+        backgroundColor: "#ffffff"
       },
-      "package": getUniqueIdentifier()
+      package: getUniqueIdentifier()
     },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+    web: {
+      bundler: "metro",
+      output: "static",
+      favicon: "./assets/images/favicon.png"
     },
-    "plugins": [
+    plugins: [
       "expo-router",
       [
         "expo-splash-screen",
@@ -62,15 +62,15 @@ export default {
         }
       ]
     ],
-    "experiments": {
-      "typedRoutes": true
+    experiments: {
+      typedRoutes: true
     },
-    "extra": {
-      "router": {
-        "origin": false
+    extra: {
+      router: {
+        origin: false
       },
-      "eas": {
-        "projectId": "f084fcfd-fcba-43ca-bd95-f97b522d0544"
+      eas: {
+        projectId: "f084fcfd-fcba-43ca-bd95-f97b522d0544"
       }
     }
   }
