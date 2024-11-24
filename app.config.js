@@ -35,6 +35,7 @@ export default {
     scheme: "myapp",
     userInterfaceStyle: "automatic",
     newArchEnabled: true,
+    owner: "maksimzubrytski",
     ios: {
       supportsTablet: true
     },
